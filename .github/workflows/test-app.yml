@@ -16,5 +16,5 @@ jobs:
           node-version: '18'
           check-latest: true
       - run: npm install
-      - run: npm test
-      - run: npm lint
+      - run: npm run test
+      - run: npm run lint

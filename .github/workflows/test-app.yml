@@ -2,9 +2,10 @@ name: Test Applications
 on:
   push:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, synchronize, reopened]
 jobs:
-  Test-Applications:
+  Test-Application:
+    name: Test Application
     runs-on: ubuntu-latest
     steps:
       - run: echo "Starting Tests for Applications"

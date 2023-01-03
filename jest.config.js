@@ -3,4 +3,5 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   globalSetup: 'jest-preset-angular/global-setup',
   collectCoverage: true,
+  resetMocks: true,
 };

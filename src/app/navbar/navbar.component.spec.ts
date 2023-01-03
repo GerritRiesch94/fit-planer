@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
+import { MockComponent } from 'ng-mocks';
+import { LanguageSwitchComponent } from './language-switch/language-switch.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,7 +12,8 @@ describe('NavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavbarComponent],
+      declarations: [NavbarComponent, MockComponent(LanguageSwitchComponent)],
+      imports: [MatIconModule, MatToolbarModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavbarComponent);

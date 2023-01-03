@@ -12,9 +12,10 @@ Jest setup is created by support of following articles and related dependencies:
 
 ## ESLint and Prettier
 
-Setup is created by support of following article:
+Setup is created by support of following article and github repo readme:
 
 * [ESLint, Prettier and Angular](https://dev.to/this-is-angular/configure-prettier-and-eslint-with-angular-526c)
+* [Tailwind ESLint](https://github.com/francoismassart/eslint-plugin-tailwindcss)
 
 
 ## Tailwind CSS

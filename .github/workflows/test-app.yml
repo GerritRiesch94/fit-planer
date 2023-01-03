@@ -9,6 +9,8 @@ jobs:
       - run: echo "Starting Tests for Applications"
       - name: Check out repository code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Setup Node
         uses: actions/setup-node@v2
         with:

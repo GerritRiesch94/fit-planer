@@ -1,8 +1,6 @@
-name: Test Applications
+name: Test Application
 on:
   push:
-  pull_request:
-    types: [opened, synchronize, reopened]
 jobs:
   Test-Application:
     name: Test Application
@@ -18,4 +16,11 @@ jobs:
           check-latest: true
       - run: npm install
       - run: npm run test
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          projectBaseDir: src
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - run: npm run lint

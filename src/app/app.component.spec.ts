@@ -24,4 +24,15 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should toggle drawer open flag', () => {
+    // arrange
+    component.drawerOpenFlag = false;
+
+    // act
+    component.toggleDrawer();
+
+    // assert
+    expect(component.drawerOpenFlag).toBe(true);
+  });
 });

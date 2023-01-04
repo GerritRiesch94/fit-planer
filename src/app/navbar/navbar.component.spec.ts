@@ -24,4 +24,15 @@ describe('NavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit toggle drawer event', () => {
+    // arrange
+    const emitToggleDrawerEventSpy = jest.spyOn(component.toggleDrawerEvent, 'emit');
+
+    // act
+    component.emitToggleDrawerEvent();
+
+    // assert
+    expect(emitToggleDrawerEventSpy).toHaveBeenCalledTimes(1);
+  });
 });

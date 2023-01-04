@@ -14,13 +14,16 @@ import { LanguageSwitchComponent } from './navbar/language-switch/language-switc
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
-export function createTranslateLoader(http: HttpClient) {
+import { AthleteComponent } from './athlete/athlete.component';
+import { AppRoutingModule } from './app-routing.module';
+export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LanguageSwitchComponent],
+  declarations: [AppComponent, NavbarComponent, LanguageSwitchComponent, AthleteComponent],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,

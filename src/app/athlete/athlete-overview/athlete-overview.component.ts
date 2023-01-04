@@ -5,7 +5,6 @@ import { Athlete } from '../model/athlete';
 @Component({
   selector: 'app-athlete-overview',
   templateUrl: './athlete-overview.component.html',
-  styleUrls: ['./athlete-overview.component.css'],
 })
 export class AthleteOverviewComponent {
   displayedColumns: string[] = ['combinedName', 'age', 'combinedAddress', 'email', 'phoneNumber', 'options'];

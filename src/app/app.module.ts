@@ -11,8 +11,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSwitchComponent } from './navbar/language-switch/language-switch.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { AthleteComponent } from './athlete/athlete.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,11 +18,11 @@ import { AthleteOverviewComponent } from './athlete/athlete-overview/athlete-ove
 import { AthleteCreationComponent } from './athlete/athlete-creation/athlete-creation.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatRippleModule } from '@angular/material/core';
 import { AthleteOverviewOptionsComponent } from './athlete/athlete-overview/athlete-overview-options/athlete-overview-options.component';
 import { RoutingMenuComponent } from './navbar/routing-menu/routing-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
+
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
@@ -52,12 +50,9 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
       defaultLanguage: 'en-US',
     }),
     HttpClientModule,
-    MatFormFieldModule,
-    MatSelectModule,
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatRippleModule,
     MatSidenavModule,
     MatDividerModule,
   ],

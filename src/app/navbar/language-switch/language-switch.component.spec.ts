@@ -4,7 +4,7 @@ import { LanguageSwitchComponent } from './language-switch.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { MatOptionModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 
 describe('LanguageSwitchComponent', () => {
   let component: LanguageSwitchComponent;
@@ -15,7 +15,7 @@ describe('LanguageSwitchComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [LanguageSwitchComponent],
-      imports: [TranslateModule.forRoot(), MatMenuModule, MatIconModule, MatOptionModule],
+      imports: [TranslateModule.forRoot(), MatMenuModule, MatIconModule, MatButtonModule],
       providers: [{ provide: TranslateService, useValue: translateServiceMock }],
     }).compileComponents();
 

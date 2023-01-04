@@ -22,6 +22,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRippleModule } from '@angular/material/core';
 import { AthleteOverviewOptionsComponent } from './athlete/athlete-overview/athlete-overview-options/athlete-overview-options.component';
+import { RoutingMenuComponent } from './navbar/routing-menu/routing-menu.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
 }
@@ -35,6 +38,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     AthleteOverviewComponent,
     AthleteCreationComponent,
     AthleteOverviewOptionsComponent,
+    RoutingMenuComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -54,6 +58,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     MatTableModule,
     MatPaginatorModule,
     MatRippleModule,
+    MatSidenavModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

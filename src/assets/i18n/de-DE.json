@@ -1,4 +1,21 @@
 {
   "language": "Sprache",
-  "welcome-title": "Willkommen beim Fit Planer"
+  "welcome-title": "Willkommen beim Fit Planer",
+  "athlete":{
+    "row": {
+      "combinedName": "Name",
+      "age": "Alter",
+      "combinedAddress": "Adresse",
+      "email": "Email",
+      "phoneNumber": "Telefon Nr."
+    },
+    "table": {
+      "noData": "Keine Daten vorhanden!!!"
+    },
+    "options": {
+      "show": "Athlet Details anzeigen",
+      "modify": "Athlet bearbeiten",
+      "delete": "Athlet löschen"
+    }
+  }
 }

@@ -1,0 +1,17 @@
+<button mat-icon-button [matMenuTriggerFor]="options">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #options="matMenu">
+  <button mat-menu-item>
+    <mat-icon>visibility</mat-icon>
+    <span>{{ 'athlete.options.show' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>edit_note</mat-icon>
+    <span>{{ 'athlete.options.modify' | translate }}</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>delete</mat-icon>
+    <span>{{ 'athlete.options.delete' | translate }}</span>
+  </button>
+</mat-menu>

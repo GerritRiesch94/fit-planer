@@ -1,4 +1,21 @@
 {
   "language": "language",
-  "welcome-title": "Welcome to the Fit Planer"
+  "welcome-title": "Welcome to the Fit Planer",
+  "athlete":{
+    "row": {
+      "combinedName": "Name",
+      "age": "Age",
+      "combinedAddress": "Address",
+      "email": "Email",
+      "phoneNumber": "Phone Number"
+    },
+    "table": {
+      "noData": "No existing data!!!"
+    },
+    "options": {
+      "show": "Show athlete details",
+      "modify": "Modify athlete",
+      "delete": "Delete athlete"
+    }
+  }
 }

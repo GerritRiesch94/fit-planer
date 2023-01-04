@@ -1,0 +1,47 @@
+<div class="flex justify-center">
+  <div class="mt-10 w-2/3 rounded-lg shadow-xl outline outline-1 outline-gray-400">
+    <mat-table mat-table [dataSource]="athletes">
+      <ng-container matColumnDef="combinedName">
+        <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.combinedName' | translate }}</mat-header-cell>
+        <mat-cell *matCellDef="let athlete">{{ athlete.combinedName }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="age">
+        <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.age' | translate }}</mat-header-cell>
+        <mat-cell *matCellDef="let athlete">{{ athlete.age }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="combinedAddress">
+        <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.combinedAddress' | translate }}</mat-header-cell>
+        <mat-cell *matCellDef="let athlete">{{ athlete.combinedAddress }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.email' | translate }}</mat-header-cell>
+        <mat-cell *matCellDef="let athlete">{{ athlete.email }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="phoneNumber">
+        <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.phoneNumber' | translate }}</mat-header-cell>
+        <mat-cell *matCellDef="let athlete">{{ athlete.phoneNumber }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="options">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let athlete">
+          <app-athlete-overview-options [athlete]="athlete"></app-athlete-overview-options>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+      <mat-row *matNoDataRow>
+        <mat-cell>{{ 'athlete.table.noData' | translate }}</mat-cell>
+      </mat-row>
+    </mat-table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select a page of athletes">
+    </mat-paginator>
+  </div>
+</div>

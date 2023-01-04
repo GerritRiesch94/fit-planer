@@ -13,7 +13,7 @@ export class LanguageSwitchComponent {
 
   constructor(private readonly translateService: TranslateService) {}
 
-  changeLanguage(selectedId: string) {
+  changeLanguage(selectedId: string): void {
     const matchingLanguage = this.languages.find((language) => language.id === selectedId);
     if (matchingLanguage) {
       this.translateService.use(matchingLanguage.value);

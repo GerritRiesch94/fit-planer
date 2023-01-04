@@ -12,14 +12,22 @@ Jest setup is created by support of following articles and related dependencies:
 
 ## ESLint and Prettier
 
-Setup is created by support of following article and github repo readme:
+Setup is created by support of following article and GitHub repo readme:
 
 * [ESLint, Prettier and Angular](https://dev.to/this-is-angular/configure-prettier-and-eslint-with-angular-526c)
 * [Tailwind ESLint](https://github.com/francoismassart/eslint-plugin-tailwindcss)
 
 
-## Tailwind CSS
+## UI Components
 
-Setup is created by support of following article: 
+For the UI components we use Angular Material and Tailwind CSS
 
-* [Tailwind CSS](https://tailwindcss.com/docs/guides/angular)
+### Angular Material
+
+Setup is created by the [Angular Material Doc](https://material.angular.io/guide/getting-started)
+
+### Tailwind CSS
+
+Setup is created by support of following article:
+
+* [Tailwind CSS and Angular](https://tailwindcss.com/docs/guides/angular)

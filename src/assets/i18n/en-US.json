@@ -1,7 +1,9 @@
 {
   "language": "language",
   "welcome-title": "Welcome to the Fit Planer",
+  "navigation-overview": "Navigation Overview",
   "athlete":{
+    "overview": "Athlete Overview",
     "row": {
       "combinedName": "Name",
       "age": "Age",

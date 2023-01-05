@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TranslateModule } from '@ngx-translate/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { Athlete } from '../model/athlete';
 
 describe('AthleteOverviewComponent', () => {
   let component: AthleteOverviewComponent;
@@ -25,5 +26,24 @@ describe('AthleteOverviewComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should set data source', () => {
+    // arrange
+    const athletes: Athlete[] = [
+      {
+        combinedName: 'Ash Ketchum',
+        age: '10',
+        combinedAddress: 'Alabastia City',
+        email: 'ash.ketchum@pokemail.com',
+        phoneNumber: '12345678',
+      },
+    ];
+
+    // act
+    component.athletes = athletes;
+
+    // assert
+    expect(component.dataSourceAthletes.data).toStrictEqual(athletes);
   });
 });

@@ -3,6 +3,7 @@ import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { AthleteDataService } from './athlete-data.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Athlete } from '../model/athlete';
+import { ENVIRONMENT } from '../../../environments/provider/environment.token';
 
 describe('AthleteDataService', () => {
   let service: AthleteDataService;
@@ -10,7 +11,10 @@ describe('AthleteDataService', () => {
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({ imports: [HttpClientTestingModule] });
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [{ provide: ENVIRONMENT, useValue: { fitPlanerBackend: { url: 'http://localhost:3000' } } }],
+    });
     service = TestBed.inject(AthleteDataService);
     httpMock = TestBed.inject(HttpTestingController);
   });

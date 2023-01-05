@@ -1,5 +1,7 @@
 <!-- Übersicht mit Suche -->
-<app-athlete-overview></app-athlete-overview>
+<ng-container *ngIf="athletes$ | async as athletes">
+  <app-athlete-overview [athletes]="athletes"></app-athlete-overview>
+</ng-container>
 <!-- Hinzufügen von Athleten -->
 <!-- Bearbeiten/Hinzufügen/Löschen/Detail Ansicht -->
 <!--  -->

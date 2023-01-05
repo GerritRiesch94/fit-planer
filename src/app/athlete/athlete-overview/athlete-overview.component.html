@@ -1,6 +1,6 @@
 <div class="flex justify-center">
   <div class="mt-10 w-2/3 rounded-lg shadow-xl outline outline-1 outline-gray-400">
-    <mat-table mat-table [dataSource]="athletes">
+    <mat-table mat-table [dataSource]="dataSourceAthletes">
       <ng-container matColumnDef="combinedName">
         <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.combinedName' | translate }}</mat-header-cell>
         <mat-cell *matCellDef="let athlete">{{ athlete.combinedName }}</mat-cell>

@@ -1,27 +1,18 @@
-import { Component } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
+import { Component, Input } from '@angular/core';
 import { Athlete } from '../model/athlete';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-athlete-overview',
   templateUrl: './athlete-overview.component.html',
 })
 export class AthleteOverviewComponent {
+  @Input()
+  set athletes(athletes: Athlete[]) {
+    this.dataSourceAthletes.data = athletes;
+  }
+
+  dataSourceAthletes = new MatTableDataSource<Athlete>();
+
   displayedColumns: string[] = ['combinedName', 'age', 'combinedAddress', 'email', 'phoneNumber', 'options'];
-  athletes = new MatTableDataSource<Athlete>([
-    {
-      combinedName: 'Stefan Sportler',
-      age: '32',
-      combinedAddress: 'Am Acker 31, 90469 Nürnberg',
-      email: 'stefan.sportler@live.de',
-      phoneNumber: '017612345678',
-    },
-    {
-      combinedName: 'Anna Athletin',
-      age: '40',
-      combinedAddress: 'Bergstraße 12, 90411Nürnberg',
-      email: 'anna.athletin@live.de',
-      phoneNumber: '016987654321',
-    },
-  ]);
 }

@@ -22,6 +22,8 @@ import { AthleteOverviewOptionsComponent } from './athlete/athlete-overview/athl
 import { RoutingMenuComponent } from './navbar/routing-menu/routing-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
+import { environment } from '../environments/environment';
+import { ENVIRONMENT } from '../environments/provider/environment.token';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -56,7 +58,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     MatSidenavModule,
     MatDividerModule,
   ],
-  providers: [],
+  providers: [{ provide: ENVIRONMENT, useValue: environment }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -15,6 +15,7 @@
       "noData": "Keine Daten vorhanden!!!"
     },
     "options": {
+      "add": "Athlet hinzufügen",
       "show": "Athlet Details anzeigen",
       "modify": "Athlet bearbeiten",
       "delete": "Athlet löschen"

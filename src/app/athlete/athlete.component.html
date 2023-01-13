@@ -1,7 +1,16 @@
-<!-- Übersicht mit Suche -->
-<ng-container *ngIf="athletes$ | async as athletes">
-  <app-athlete-overview [athletes]="athletes"></app-athlete-overview>
-</ng-container>
-<!-- Hinzufügen von Athleten -->
-<!-- Bearbeiten/Hinzufügen/Löschen/Detail Ansicht -->
-<!--  -->
+<div class="flex justify-center">
+  <div class="mt-10 w-2/3 flex-col space-y-4">
+    <div>
+      <a routerLink="create" mat-fab extended color="secondary">
+        <mat-icon>add</mat-icon>
+        {{ 'athlete.options.add' | translate }}
+      </a>
+    </div>
+    <!-- Übersicht mit Suche -->
+    <div>
+      <ng-container *ngIf="athletes$ | async as athletes">
+        <app-athlete-overview [athletes]="athletes"></app-athlete-overview>
+      </ng-container>
+    </div>
+  </div>
+</div>

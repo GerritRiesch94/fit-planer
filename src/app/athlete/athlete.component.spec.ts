@@ -4,6 +4,8 @@ import { AthleteComponent } from './athlete.component';
 import { MockComponent } from 'ng-mocks';
 import { AthleteOverviewComponent } from './athlete-overview/athlete-overview.component';
 import { AthleteDataService } from './service/athlete-data.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('AthleteComponent', () => {
   let component: AthleteComponent;
@@ -14,6 +16,7 @@ describe('AthleteComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AthleteComponent, MockComponent(AthleteOverviewComponent)],
+      imports: [TranslateModule.forRoot(), MatIconModule],
       providers: [{ provide: AthleteDataService, useValue: athleteDataServiceMock }],
     }).compileComponents();
 

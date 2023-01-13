@@ -15,6 +15,7 @@
       "noData": "No existing data!!!"
     },
     "options": {
+      "add": "Add athlete",
       "show": "Show athlete details",
       "modify": "Modify athlete",
       "delete": "Delete athlete"

@@ -24,6 +24,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { environment } from '../environments/environment';
 import { ENVIRONMENT } from '../environments/provider/environment.token';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarControlElementComponent } from './sidebar/sidebar-control-element/sidebar-control-element.component';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -38,6 +40,8 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     AthleteOverviewComponent,
     AthleteCreationComponent,
     AthleteOverviewOptionsComponent,
+    SidebarComponent,
+    SidebarControlElementComponent,
   ],
   imports: [
     AppRoutingModule,

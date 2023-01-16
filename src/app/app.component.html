@@ -4,25 +4,7 @@
     mode="side"
     opened="true"
   >
-    <div class="flex-col">
-      <div class="h-16 pt-3 pl-3" matTooltip="Menü">
-        <button mat-mini-fab id="menu-button" (click)="toggleDrawer()" color="primary">
-          <mat-icon aria-label="Menu">menu</mat-icon>
-        </button>
-      </div>
-      <div class="mt-10">
-        <div matTooltip="{{ 'athlete.overview' | translate }}" [matTooltipPosition]="'right'">
-          <button mat-stroked-button (click)="navigateTo('athlete')">
-            <div class="flex items-center justify-between space-x-2">
-              <div class="mt-2">
-                <mat-icon>group</mat-icon>
-              </div>
-              <div class="mt-1" *ngIf="drawerOpenFlag">{{ 'athlete.overview' | translate }}</div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
+    <app-sidebar></app-sidebar>
   </mat-drawer>
   <mat-drawer-content>
     <app-navbar></app-navbar>

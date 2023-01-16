@@ -6,23 +6,15 @@ import { MockComponent } from 'ng-mocks';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule } from '@angular/material/icon';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 describe('AppComponent', () => {
   let component: AppComponent;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent, MockComponent(NavbarComponent)],
-      imports: [
-        TranslateModule.forRoot(),
-        RouterTestingModule,
-        MatSidenavModule,
-        NoopAnimationsModule,
-        MatIconModule,
-        MatTooltipModule,
-      ],
+      declarations: [AppComponent, MockComponent(NavbarComponent), MockComponent(SidebarComponent)],
+      imports: [TranslateModule.forRoot(), RouterTestingModule, MatSidenavModule, NoopAnimationsModule],
     }).compileComponents();
     const fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
@@ -31,16 +23,5 @@ describe('AppComponent', () => {
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should toggle drawer open flag', () => {
-    // arrange
-    component.drawerOpenFlag = false;
-
-    // act
-    component.toggleDrawer();
-
-    // assert
-    expect(component.drawerOpenFlag).toBe(true);
   });
 });

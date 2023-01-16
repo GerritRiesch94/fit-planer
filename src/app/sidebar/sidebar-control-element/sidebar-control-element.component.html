@@ -1,0 +1,10 @@
+<div matTooltip="{{ toolTip }}" [matTooltipPosition]="'right'">
+  <button mat-stroked-button (click)="emitRouteForNavigation('athlete')">
+    <div class="flex items-center justify-between space-x-2">
+      <div class="mt-2">
+        <mat-icon>{{ icon }}</mat-icon>
+      </div>
+      <div class="mt-1" *ngIf="drawerOpenFlag">{{ controlElementText }}</div>
+    </div>
+  </button>
+</div>

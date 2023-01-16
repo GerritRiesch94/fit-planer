@@ -1,0 +1,16 @@
+<div class="flex-col">
+  <div class="h-16 pt-3 pl-3" matTooltip="Menü">
+    <button mat-mini-fab id="menu-button" (click)="toggleDrawer()" color="primary">
+      <mat-icon aria-label="Menu">menu</mat-icon>
+    </button>
+  </div>
+  <div class="mt-10">
+    <app-sidebar-control-element
+      [drawerOpenFlag]="drawerOpenFlag"
+      [toolTip]="'athlete.overview' | translate"
+      [icon]="'group'"
+      [controlElementText]="'athlete.overview' | translate"
+      (routeToNavigateEvent)="navigateTo($event)"
+    ></app-sidebar-control-element>
+  </div>
+</div>

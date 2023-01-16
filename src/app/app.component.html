@@ -1,14 +1,13 @@
 <mat-drawer-container autosize class="h-screen">
   <mat-drawer
-    class="flex h-full flex-col justify-center p-2 shadow-xl outline outline-4"
+    class="flex h-full flex-col justify-center overflow-x-hidden px-2 outline outline-4"
     mode="side"
-    [opened]="drawerOpenFlag"
+    opened="true"
   >
-    <h1>{{ 'navigation-overview' | translate }}</h1>
-    <app-routing-menu></app-routing-menu>
+    <app-sidebar></app-sidebar>
   </mat-drawer>
   <mat-drawer-content>
-    <app-navbar (toggleDrawerEvent)="toggleDrawer()"></app-navbar>
+    <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

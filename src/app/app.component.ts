@@ -4,10 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent {
-  drawerOpenFlag = false;
-
-  toggleDrawer(): void {
-    this.drawerOpenFlag = !this.drawerOpenFlag;
-  }
-}
+export class AppComponent {}

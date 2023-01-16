@@ -2,6 +2,9 @@
   "language": "language",
   "welcome-title": "Welcome to the Fit Planer",
   "navigation-overview": "Navigation Overview",
+  "menu": {
+    "title": "Menu"
+  },
   "athlete":{
     "overview": "Athlete Overview",
     "row": {

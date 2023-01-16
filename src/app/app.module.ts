@@ -19,11 +19,11 @@ import { AthleteCreationComponent } from './athlete/athlete-creation/athlete-cre
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { AthleteOverviewOptionsComponent } from './athlete/athlete-overview/athlete-overview-options/athlete-overview-options.component';
-import { RoutingMenuComponent } from './navbar/routing-menu/routing-menu.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { environment } from '../environments/environment';
 import { ENVIRONMENT } from '../environments/provider/environment.token';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -38,7 +38,6 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     AthleteOverviewComponent,
     AthleteCreationComponent,
     AthleteOverviewOptionsComponent,
-    RoutingMenuComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -57,6 +56,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     MatPaginatorModule,
     MatSidenavModule,
     MatDividerModule,
+    MatTooltipModule,
   ],
   providers: [{ provide: ENVIRONMENT, useValue: environment }],
   bootstrap: [AppComponent],

@@ -1,14 +1,31 @@
 <mat-drawer-container autosize class="h-screen">
   <mat-drawer
-    class="flex h-full flex-col justify-center p-2 shadow-xl outline outline-4"
+    class="flex h-full flex-col justify-center overflow-x-hidden px-2 outline outline-4"
     mode="side"
-    [opened]="drawerOpenFlag"
+    opened="true"
   >
-    <h1>{{ 'navigation-overview' | translate }}</h1>
-    <app-routing-menu></app-routing-menu>
+    <div class="flex-col">
+      <div class="h-16 pt-3 pl-3" matTooltip="Menü">
+        <button mat-mini-fab id="menu-button" (click)="toggleDrawer()" color="primary">
+          <mat-icon aria-label="Menu">menu</mat-icon>
+        </button>
+      </div>
+      <div class="mt-10">
+        <div matTooltip="{{ 'athlete.overview' | translate }}" [matTooltipPosition]="'right'">
+          <button mat-stroked-button (click)="navigateTo('athlete')">
+            <div class="flex items-center justify-between space-x-2">
+              <div class="mt-2">
+                <mat-icon>group</mat-icon>
+              </div>
+              <div class="mt-1" *ngIf="drawerOpenFlag">{{ 'athlete.overview' | translate }}</div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
   </mat-drawer>
   <mat-drawer-content>
-    <app-navbar (toggleDrawerEvent)="toggleDrawer()"></app-navbar>
+    <app-navbar></app-navbar>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

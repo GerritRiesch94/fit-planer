@@ -1,7 +1,13 @@
 {
+  "app": {
+    "name": "Fit Planer"
+  },
   "language": "Sprache",
   "welcome-title": "Willkommen beim Fit Planer",
   "navigation-overview": "Navigations Übersicht",
+  "home": {
+    "title": "Home"
+  },
   "menu": {
     "title": "Menü"
   },

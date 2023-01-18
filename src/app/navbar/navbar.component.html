@@ -1,4 +1,17 @@
-<mat-toolbar color="primary" class="flex space-x-1">
-  <div>Fit Planer</div>
-  <app-language-switch></app-language-switch>
+<mat-toolbar color="primary">
+  <div class="flex w-full items-center justify-between">
+    <div class="flex space-x-4">
+      <ng-container *ngFor="let routerLinkElement of routerLinkList">
+        <a
+          class="border-b-2 border-b-transparent hover:border-white"
+          matTooltip="{{ routerLinkElement.toolTip | translate }}"
+          routerLink="{{ routerLinkElement.routerLink }}"
+          >{{ routerLinkElement.displayedText | translate }}</a
+        >
+      </ng-container>
+    </div>
+    <div>
+      <app-language-switch></app-language-switch>
+    </div>
+  </div>
 </mat-toolbar>

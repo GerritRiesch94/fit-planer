@@ -1,8 +1,17 @@
 {
+  "app": {
+    "name": "Fit Planer"
+  },
   "language": "Sprache",
   "welcome-title": "Willkommen beim Fit Planer",
   "navigation-overview": "Navigations Übersicht",
-  "athlete":{
+  "home": {
+    "title": "Home"
+  },
+  "menu": {
+    "title": "Menü"
+  },
+  "athlete": {
     "overview": "Athleten Übersicht",
     "row": {
       "combinedName": "Name",

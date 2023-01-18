@@ -4,6 +4,9 @@ import { NavbarComponent } from './navbar.component';
 import { MockComponent } from 'ng-mocks';
 import { LanguageSwitchComponent } from './language-switch/language-switch.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -12,7 +15,7 @@ describe('NavbarComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [NavbarComponent, MockComponent(LanguageSwitchComponent)],
-      imports: [MatToolbarModule],
+      imports: [MatToolbarModule, MatTooltipModule, TranslateModule.forRoot(), RouterTestingModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(NavbarComponent);

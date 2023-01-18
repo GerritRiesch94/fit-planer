@@ -1,1 +1,118 @@
-<p>create athlete</p>
+<div class="flex justify-center">
+  <mat-card class="mt-10 w-1/2 rounded-lg">
+    <mat-card-content>
+      <form [formGroup]="athleteForm" (ngSubmit)="saveAthlete()">
+        <div class="flex flex-col space-y-4">
+          <div class="flex space-x-2">
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="example@live.de" formControlName="email" />
+              <mat-error *ngIf="athleteForm.controls.email.invalid">You must enter a valid email</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Phone Number</mat-label>
+              <input matInput formControlName="phoneNumber" />
+              <mat-error *ngIf="athleteForm.controls.phoneNumber.invalid"
+                >You must enter a valid phone number</mat-error
+              >
+            </mat-form-field>
+          </div>
+
+          <div class="flex space-x-2">
+            <mat-form-field appearance="outline">
+              <mat-label>Title</mat-label>
+              <input matInput placeholder="Mr/Mrs." formControlName="title" />
+              <mat-error *ngIf="athleteForm.controls.title.invalid">You must enter a valid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="Anna" formControlName="firstName" />
+              <mat-error *ngIf="athleteForm.controls.firstName.invalid">You must enter a valid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="Athlete" formControlName="lastName" />
+              <mat-error *ngIf="athleteForm.controls.lastName.invalid">You must enter a valid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Age (optional)</mat-label>
+              <input
+                matTooltip="You don't have to fill this out but we can evaluate a better training status and more specified training with this indicator"
+                matInput
+                placeholder="27"
+                formControlName="age"
+              />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Gender (optional)</mat-label>
+              <input
+                matTooltip="You don't have to fill this out but we can evaluate a better training status and more specified training with this indicator"
+                matInput
+                placeholder="m/f/d"
+                formControlName="gender"
+              />
+            </mat-form-field>
+          </div>
+
+          <div class="flex space-x-2">
+            <mat-form-field appearance="outline">
+              <mat-label>Street</mat-label>
+              <input matInput formControlName="street" />
+              <mat-error *ngIf="athleteForm.controls.street.invalid">You must enter a valid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Address Appendix (optional)</mat-label>
+              <input matInput formControlName="addressAppendix" />
+            </mat-form-field>
+          </div>
+
+          <div class="flex space-x-2">
+            <mat-form-field appearance="outline">
+              <mat-label>Postcode</mat-label>
+              <input matInput placeholder="1****" formControlName="postCode" />
+              <mat-error *ngIf="athleteForm.controls.postCode.invalid">You must enter a valid value</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>City</mat-label>
+              <input matInput placeholder="City" formControlName="city" />
+              <mat-error *ngIf="athleteForm.controls.city.invalid">You must enter a valid value</mat-error>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline">
+            <mat-label>State (optional)</mat-label>
+            <input matInput placeholder="State" formControlName="state" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label
+              >Country
+              <mat-icon>flag</mat-icon>
+            </mat-label>
+
+            <mat-select formControlName="country">
+              <mat-option>-- None --</mat-option>
+              <mat-option value="Germany">Germany</mat-option>
+              <mat-option value="Austria">Austria</mat-option>
+              <mat-option value="Switzerland">Switzerland</mat-option>
+            </mat-select>
+
+            <mat-error *ngIf="athleteForm.controls.country.invalid">You must enter a valid value</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="flex space-x-2">
+          <button mat-raised-button class="bg-green-300" type="submit" [disabled]="!athleteForm.valid">
+            Save Athlete
+          </button>
+          <button mat-raised-button color="accent" type="reset">Reset Input</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

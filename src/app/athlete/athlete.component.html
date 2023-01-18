@@ -6,7 +6,6 @@
         {{ 'athlete.options.add' | translate }}
       </a>
     </div>
-    <!-- Übersicht mit Suche -->
     <div>
       <ng-container *ngIf="athletes$ | async as athletes">
         <app-athlete-overview [athletes]="athletes"></app-athlete-overview>

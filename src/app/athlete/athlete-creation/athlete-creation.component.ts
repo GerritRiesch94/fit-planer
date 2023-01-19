@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AthleteDataService } from '../service/athlete-data.service';
 import { Address, AthleteData } from '../model/athlete-data';
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-athlete-creation',
   templateUrl: './athlete-creation.component.html',
 })
-export class AthleteCreationComponent {
+export class AthleteCreationComponent implements OnDestroy {
   private athleteCreationSubscription: Subscription | undefined;
   constructor(private readonly athleteDataService: AthleteDataService) {}
 
@@ -59,5 +59,9 @@ export class AthleteCreationComponent {
       state: state,
       country: country,
     };
+  }
+
+  ngOnDestroy(): void {
+    this.athleteCreationSubscription?.unsubscribe();
   }
 }

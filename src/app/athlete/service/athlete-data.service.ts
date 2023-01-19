@@ -4,6 +4,7 @@ import { Athlete } from '../model/athlete';
 import { Observable } from 'rxjs';
 import { ENVIRONMENT } from '../../../environments/provider/environment.token';
 import { EnvironmentInterface } from '../../../environments/model/environment.interface';
+import { AthleteData } from '../model/athlete-data';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +19,9 @@ export class AthleteDataService {
 
   public getAllAthletes(): Observable<Athlete[]> {
     return this.httpClient.get<Athlete[]>(this.environment.fitPlanerBackend.url + this.ATHLETE_PATH);
+  }
+
+  public createAthlete(athleteData: AthleteData): Observable<Athlete> {
+    return this.httpClient.post<Athlete>(this.environment.fitPlanerBackend.url + this.ATHLETE_PATH, athleteData);
   }
 }

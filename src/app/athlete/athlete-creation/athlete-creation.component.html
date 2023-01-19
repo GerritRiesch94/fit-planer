@@ -10,11 +10,8 @@
               <mat-error *ngIf="athleteForm.controls.email.invalid">You must enter a valid email</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
-              <mat-label>Phone Number</mat-label>
+              <mat-label>Phone Number (optional)</mat-label>
               <input matInput formControlName="phoneNumber" />
-              <mat-error *ngIf="athleteForm.controls.phoneNumber.invalid"
-                >You must enter a valid phone number</mat-error
-              >
             </mat-form-field>
           </div>
 

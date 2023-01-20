@@ -26,6 +26,11 @@ import { ENVIRONMENT } from '../environments/provider/environment.token';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarControlElementComponent } from './sidebar/sidebar-control-element/sidebar-control-element.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -50,10 +55,6 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    TranslateModule.forRoot({
-      loader: { provide: TranslateLoader, useFactory: createTranslateLoader, deps: [HttpClient] },
-      defaultLanguage: 'en-US',
-    }),
     HttpClientModule,
     MatMenuModule,
     MatTableModule,
@@ -61,6 +62,15 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     MatSidenavModule,
     MatDividerModule,
     MatTooltipModule,
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: { provide: TranslateLoader, useFactory: createTranslateLoader, deps: [HttpClient] },
+      defaultLanguage: 'en-US',
+    }),
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatSelectModule,
   ],
   providers: [{ provide: ENVIRONMENT, useValue: environment }],
   bootstrap: [AppComponent],

@@ -4,6 +4,7 @@ import { AthleteDataService } from './athlete-data.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { Athlete } from '../model/athlete';
 import { ENVIRONMENT } from '../../../environments/provider/environment.token';
+import { AthleteData } from '../model/athlete-data';
 
 describe('AthleteDataService', () => {
   let service: AthleteDataService;
@@ -50,6 +51,39 @@ describe('AthleteDataService', () => {
       const req = httpMock.expectOne('http://localhost:3000/athlete');
       expect(req.request.method).toBe('GET');
       req.flush(athletes);
+      tick();
+    }));
+  });
+
+  describe('create athlete', () => {
+    it('should call backend with expected params and return value', fakeAsync(() => {
+      // arrange
+      const athleteData: AthleteData = {
+        title: 'Mr.',
+        firstName: 'Ash',
+        lastName: 'Ketchum',
+        age: '36',
+        gender: 'm',
+        email: 'ash.ketchum@pokemail.com',
+        phoneNumber: '0123456789',
+        address: {
+          street: 'Street 1',
+          addressAppendix: 'First Floor',
+          postCode: '98745',
+          city: 'Alabastia',
+          state: 'Kanto',
+          country: 'Japan',
+        },
+      };
+
+      // act
+      service.createAthlete(athleteData).subscribe();
+
+      // assert
+      const req = httpMock.expectOne('http://localhost:3000/athlete');
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toStrictEqual(athleteData);
+      req.flush({});
       tick();
     }));
   });

@@ -1,7 +1,9 @@
 <div class="rounded-lg shadow-xl outline outline-1 outline-gray-400">
-  <mat-table mat-table [dataSource]="dataSourceAthletes">
+  <mat-table mat-table class="rounded-t-lg" [dataSource]="dataSourceAthletes">
     <ng-container matColumnDef="combinedName">
-      <mat-header-cell *matHeaderCellDef>{{ 'athlete.row.combinedName' | translate }}</mat-header-cell>
+      <mat-header-cell class="rounded-tl-lg" *matHeaderCellDef>{{
+        'athlete.row.combinedName' | translate
+      }}</mat-header-cell>
       <mat-cell *matCellDef="let athlete">{{ athlete.combinedName }}</mat-cell>
     </ng-container>
 
@@ -26,13 +28,13 @@
     </ng-container>
 
     <ng-container matColumnDef="options">
-      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-header-cell class="rounded-tr-lg" *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let athlete">
         <app-athlete-overview-options [athlete]="athlete"></app-athlete-overview-options>
       </mat-cell>
     </ng-container>
 
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-header-row *matHeaderRowDef="displayedColumns" class="rounded-t-lg"></mat-header-row>
     <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 
     <mat-row *matNoDataRow>

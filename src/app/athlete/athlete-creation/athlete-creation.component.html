@@ -2,112 +2,152 @@
   <mat-card class="mt-10 w-1/2 rounded-lg">
     <mat-card-content>
       <form [formGroup]="athleteForm" (ngSubmit)="saveAthlete()">
-        <div class="flex flex-col space-y-4">
+        <div class="mb-7 flex flex-col space-y-7">
           <div class="flex space-x-2">
             <mat-form-field appearance="outline">
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="example@live.de" formControlName="email" />
-              <mat-error *ngIf="athleteForm.controls.email.invalid">You must enter a valid email</mat-error>
+              <mat-label>{{ 'athlete.creation.email.label' | translate }}</mat-label>
+              <input
+                matInput
+                placeholder="{{ 'athlete.creation.email.placeholder' | translate }}"
+                formControlName="email"
+              />
+              <mat-error *ngIf="athleteForm.controls.email.invalid">{{
+                'athlete.creation.email.errorMessage' | translate
+              }}</mat-error>
             </mat-form-field>
+
             <mat-form-field appearance="outline">
-              <mat-label>Phone Number (optional)</mat-label>
+              <mat-label
+                >{{ 'athlete.creation.phoneNumber.label' | translate }}
+                {{ 'athlete.creation.input.optional' | translate }}
+              </mat-label>
               <input matInput formControlName="phoneNumber" />
             </mat-form-field>
           </div>
 
           <div class="flex space-x-2">
             <mat-form-field appearance="outline">
-              <mat-label>Title</mat-label>
-              <input matInput placeholder="Mr/Mrs." formControlName="title" />
-              <mat-error *ngIf="athleteForm.controls.title.invalid">You must enter a valid value</mat-error>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>First Name</mat-label>
-              <input matInput placeholder="Anna" formControlName="firstName" />
-              <mat-error *ngIf="athleteForm.controls.firstName.invalid">You must enter a valid value</mat-error>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>Last Name</mat-label>
-              <input matInput placeholder="Athlete" formControlName="lastName" />
-              <mat-error *ngIf="athleteForm.controls.lastName.invalid">You must enter a valid value</mat-error>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-              <mat-label>Age (optional)</mat-label>
+              <mat-label>{{ 'athlete.creation.title.label' | translate }}</mat-label>
               <input
-                matTooltip="You don't have to fill this out but we can evaluate a better training status and more specified training with this indicator"
                 matInput
-                placeholder="27"
-                formControlName="age"
+                placeholder="{{ 'athlete.creation.title.placeholder' | translate }}"
+                formControlName="title"
               />
+              <mat-error *ngIf="athleteForm.controls.title.invalid">{{
+                'athlete.creation.input.defaultErrorMessage' | translate
+              }}</mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-              <mat-label>Gender (optional)</mat-label>
-              <input
-                matTooltip="You don't have to fill this out but we can evaluate a better training status and more specified training with this indicator"
-                matInput
-                placeholder="m/f/d"
-                formControlName="gender"
-              />
+              <mat-label>{{ 'athlete.creation.firstName.label' | translate }}</mat-label>
+              <input matInput formControlName="firstName" />
+              <mat-error *ngIf="athleteForm.controls.firstName.invalid">{{
+                'athlete.creation.input.defaultErrorMessage' | translate
+              }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>{{ 'athlete.creation.lastName.label' | translate }}</mat-label>
+              <input matInput formControlName="lastName" />
+              <mat-error *ngIf="athleteForm.controls.lastName.invalid">{{
+                'athlete.creation.input.defaultErrorMessage' | translate
+              }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field
+              appearance="outline"
+              matTooltip="{{ 'athlete.creation.input.optionalToolTip' | translate }}"
+            >
+              <mat-label
+                >{{ 'athlete.creation.age.label' | translate }}
+                {{ 'athlete.creation.input.optional' | translate }}</mat-label
+              >
+              <input matInput placeholder="27" formControlName="age" />
+            </mat-form-field>
+
+            <mat-form-field
+              appearance="outline"
+              matTooltip="{{ 'athlete.creation.input.optionalToolTip' | translate }}"
+            >
+              <mat-label
+                >{{ 'athlete.creation.gender.label' | translate }}
+                {{ 'athlete.creation.input.optional' | translate }}</mat-label
+              >
+              <input matInput placeholder="m/f/d" formControlName="gender" />
             </mat-form-field>
           </div>
 
           <div class="flex space-x-2">
             <mat-form-field appearance="outline">
-              <mat-label>Street</mat-label>
+              <mat-label>{{ 'athlete.creation.street.label' | translate }}</mat-label>
               <input matInput formControlName="street" />
-              <mat-error *ngIf="athleteForm.controls.street.invalid">You must enter a valid value</mat-error>
+              <mat-error *ngIf="athleteForm.controls.street.invalid">{{
+                'athlete.creation.input.defaultErrorMessage' | translate
+              }}</mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-              <mat-label>Address Appendix (optional)</mat-label>
+              <mat-label
+                >{{ 'athlete.creation.addressAppendix.label' | translate }}
+                {{ 'athlete.creation.input.optional' | translate }}</mat-label
+              >
               <input matInput formControlName="addressAppendix" />
             </mat-form-field>
           </div>
 
           <div class="flex space-x-2">
             <mat-form-field appearance="outline">
-              <mat-label>Postcode</mat-label>
-              <input matInput placeholder="1****" formControlName="postCode" />
-              <mat-error *ngIf="athleteForm.controls.postCode.invalid">You must enter a valid value</mat-error>
+              <mat-label>{{ 'athlete.creation.postCode.label' | translate }}</mat-label>
+              <input matInput formControlName="postCode" />
+              <mat-error *ngIf="athleteForm.controls.postCode.invalid">{{
+                'athlete.creation.input.defaultErrorMessage' | translate
+              }}</mat-error>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
-              <mat-label>City</mat-label>
-              <input matInput placeholder="City" formControlName="city" />
-              <mat-error *ngIf="athleteForm.controls.city.invalid">You must enter a valid value</mat-error>
+              <mat-label>{{ 'athlete.creation.city.label' | translate }}</mat-label>
+              <input matInput formControlName="city" />
+              <mat-error *ngIf="athleteForm.controls.city.invalid">{{
+                'athlete.creation.input.defaultErrorMessage' | translate
+              }}</mat-error>
             </mat-form-field>
           </div>
 
           <mat-form-field appearance="outline">
-            <mat-label>State (optional)</mat-label>
-            <input matInput placeholder="State" formControlName="state" />
+            <mat-label
+              >{{ 'athlete.creation.state.label' | translate }}
+              {{ 'athlete.creation.input.optional' | translate }}</mat-label
+            >
+            <input matInput formControlName="state" />
           </mat-form-field>
 
           <mat-form-field appearance="outline">
             <mat-label
-              >Country
+              >{{ 'athlete.creation.country.label' | translate }}
               <mat-icon>flag</mat-icon>
             </mat-label>
 
             <mat-select formControlName="country">
-              <mat-option>-- None --</mat-option>
-              <mat-option value="Germany">Germany</mat-option>
-              <mat-option value="Austria">Austria</mat-option>
-              <mat-option value="Switzerland">Switzerland</mat-option>
+              <mat-option>-- {{ 'athlete.creation.country.option.none' | translate }} --</mat-option>
+              <mat-option value="Germany">{{ 'athlete.creation.country.option.germany' | translate }}</mat-option>
+              <mat-option value="Austria">{{ 'athlete.creation.country.option.austria' | translate }}</mat-option>
+              <mat-option value="Switzerland">{{
+                'athlete.creation.country.option.switzerland' | translate
+              }}</mat-option>
             </mat-select>
 
-            <mat-error *ngIf="athleteForm.controls.country.invalid">You must enter a valid value</mat-error>
+            <mat-error *ngIf="athleteForm.controls.country.invalid">{{
+              'athlete.creation.input.defaultErrorMessage' | translate
+            }}</mat-error>
           </mat-form-field>
         </div>
         <div class="flex space-x-2">
           <button mat-raised-button class="bg-green-300" type="submit" [disabled]="!athleteForm.valid">
-            Save Athlete
+            {{ 'athlete.creation.input.save' | translate }}
           </button>
-          <button mat-raised-button color="accent" type="reset">Reset Input</button>
+          <button mat-raised-button color="accent" type="reset">
+            {{ 'athlete.creation.input.reset' | translate }}
+          </button>
         </div>
       </form>
     </mat-card-content>

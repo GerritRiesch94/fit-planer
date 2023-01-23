@@ -12,6 +12,64 @@
     "title": "Menü"
   },
   "athlete": {
+    "creation": {
+      "input": {
+        "optional": "(optional)",
+        "optionalToolTip": "Sie müssen dieses Feld nicht ausfüllen, jedoch können wir mit diesem Wert eine noch bessere Auswertung ihrers Trainings, sowie einen präziseren Trainingsplan erstellen",
+        "defaultErrorMessage": "Geben Sie einen gütligen Wert an",
+        "save": "Athlet speichern",
+        "reset": "Eingabe zurücksetzen"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@live.de",
+        "errorMessage": "Geben Sie eine gültige Email an"
+      },
+      "phoneNumber": {
+        "label": "Telefon Nr."
+      },
+      "title": {
+        "label": "Anrede",
+        "placeholder": "Herr/Frau"
+      },
+      "firstName": {
+        "label": "Vorname"
+      },
+      "lastName": {
+        "label": "Nachname"
+      },
+      "age": {
+        "label": "Alter"
+      },
+      "gender": {
+        "label": "Geschlecht",
+        "placeholder": "m/f/d"
+      },
+      "street": {
+        "label": "Straße"
+      },
+      "addressAppendix": {
+        "label": "Addresszusatz"
+      },
+      "postCode": {
+        "label": "PLZ"
+      },
+      "city": {
+        "label": "Stadt"
+      },
+      "state": {
+        "label": "Bundesland/Bezirk/Kanton"
+      },
+      "country": {
+        "label": "Land",
+        "option": {
+          "none": "Keine",
+          "germany": "Deutschland",
+          "austria": "Österreich",
+          "switzerland": "Schweiz"
+        }
+      }
+    },
     "overview": "Athleten Übersicht",
     "row": {
       "combinedName": "Name",

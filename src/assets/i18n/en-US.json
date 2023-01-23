@@ -11,7 +11,65 @@
   "menu": {
     "title": "Menu"
   },
-  "athlete":{
+  "athlete": {
+    "creation": {
+      "input": {
+        "optional": "(optional)",
+        "optionalToolTip": "You don't have to fill this out but we can evaluate a better training status and more specified training with this indicator",
+        "defaultErrorMessage": "You must enter a valid value",
+        "save": "Save Athlete",
+        "reset": "Reset Input"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@live.com",
+        "errorMessage": "You must enter a valid email"
+      },
+      "phoneNumber": {
+        "label": "Phone Number"
+      },
+      "title": {
+        "label": "Title",
+        "placeholder": "Mr./Mrs."
+      },
+      "firstName": {
+        "label": "First Name"
+      },
+      "lastName": {
+        "label": "Last Name"
+      },
+      "age": {
+        "label": "Age"
+      },
+      "gender": {
+        "label": "Gender",
+        "placeholder": "m/f/d"
+      },
+      "street": {
+        "label": "Street"
+      },
+      "addressAppendix": {
+        "label": "Address Appendix"
+      },
+      "postCode": {
+        "label": "Postcode"
+      },
+      "city": {
+        "label": "City"
+      },
+      "state": {
+        "label": "State"
+      },
+      "country": {
+        "label": "Country",
+        "option": {
+          "none": "None",
+          "germany": "Germany",
+          "austria": "Austria",
+          "switzerland": "Switzerland"
+        }
+      }
+    },
     "overview": "Athlete Overview",
     "row": {
       "combinedName": "Name",

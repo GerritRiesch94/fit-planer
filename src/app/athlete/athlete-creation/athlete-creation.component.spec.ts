@@ -12,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 describe('AthleteCreationComponent', () => {
   let component: AthleteCreationComponent;
@@ -30,8 +32,10 @@ describe('AthleteCreationComponent', () => {
         MatInputModule,
         MatSelectModule,
         MatOptionModule,
-        ReactiveFormsModule,
+        MatTooltipModule,
         NoopAnimationsModule,
+        ReactiveFormsModule,
+        TranslateModule.forRoot(),
       ],
     }).compileComponents();
 

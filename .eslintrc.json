@@ -9,6 +9,9 @@
       "files": [
         "*.ts"
       ],
+      "excludedFiles": [
+        "playwright.config.ts"
+      ],
       "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",

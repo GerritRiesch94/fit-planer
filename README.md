@@ -9,6 +9,13 @@ Jest setup is created by support of following articles and related dependencies:
 * [jest and angular](https://thymikee.github.io/jest-preset-angular/docs/getting-started/installation)
 * [angular-builders/jest](https://github.com/just-jeb/angular-builders)
 
+## Playwright
+
+Setup is created by support of following articles and docs:
+
+* [Playwright](https://playwright.dev/docs/intro)
+* [Playwright and Anulgar](https://dev.to/darlanalves/playwright-angular-cli-39ab)
+
 
 ## ESLint and Prettier
 

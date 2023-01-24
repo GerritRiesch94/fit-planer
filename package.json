@@ -7,7 +7,6 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "ci:playwright": "ng run fit-planer:playwright",
     "playwright": "npx playwright test",
     "test:codegen": "npx playwright codegen localhost:4200",
     "lint": "ng lint"
@@ -40,7 +39,6 @@
     "@angular-eslint/template-parser": "15.1.0",
     "@angular/cli": "~15.0.4",
     "@angular/compiler-cli": "^15.0.0",
-    "@dot-build/serve-and-run-angular": "^1.0.2",
     "@playwright/test": "^1.29.2",
     "@types/jest": "^29.2.5",
     "@typescript-eslint/eslint-plugin": "5.44.0",

@@ -27,8 +27,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Run Linter
         run: npm run lint
-      - name: Install Playwright
-        run: npx playwright install --with-deps
       - name: Run Playwright Tests
         run: npm run playwright
 

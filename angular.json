@@ -113,14 +113,6 @@
               "src/**/*.html"
             ]
           }
-        },
-        "playwright": {
-          "builder": "@dot-build/serve-and-run-angular:run",
-          "options": {
-            "devServerTarget": "fit-planer:serve",
-            "command": "npm",
-            "args": ["run", "playwright"]
-          }
         }
       }
     }

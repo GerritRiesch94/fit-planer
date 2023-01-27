@@ -31,6 +31,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
+import { NgOptimizedImage } from '@angular/common';
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -71,6 +72,7 @@ export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
     MatInputModule,
     MatCardModule,
     MatSelectModule,
+    NgOptimizedImage,
   ],
   providers: [{ provide: ENVIRONMENT, useValue: environment }],
   bootstrap: [AppComponent],
